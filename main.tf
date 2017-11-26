@@ -76,7 +76,7 @@ resource "aws_instance" "demo1" {
 
 resource "aws_instance" "demo2" {
   ami           = "${data.aws_ami.ubuntu.id}"
-  instance_type = "m4.large"
+  instance_type = "t2.micro"
   subnet_id     = "${aws_subnet.public.id}"
 
   tags {
